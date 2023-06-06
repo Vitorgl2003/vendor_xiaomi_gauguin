@@ -7,6 +7,8 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/product/etc/permissions/telephony_product_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/telephony_product_privapp-permissions-qti.xml \
+    vendor/xiaomi/gauguin/proprietary/system/etc/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    vendor/xiaomi/gauguin/proprietary/system/etc/sysconfig/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
     vendor/xiaomi/gauguin/proprietary/system_ext/bin/dpmd:$(TARGET_COPY_OUT_SYSTEM_EXT)/bin/dpmd \
     vendor/xiaomi/gauguin/proprietary/system_ext/etc/dpm/dpm.conf:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/dpm/dpm.conf \
     vendor/xiaomi/gauguin/proprietary/system_ext/etc/init/dpmd.rc:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/init/dpmd.rc \
@@ -18,13 +20,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml \
     vendor/xiaomi/gauguin/proprietary/system_ext/etc/permissions/vendor.qti.ims.rcsservice.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/vendor.qti.ims.rcsservice.xml \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/com.qualcomm.qti.ant@1.0.so \
-    vendor/xiaomi/gauguin/proprietary/system_ext/lib/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/fm_helium.so \
-    vendor/xiaomi/gauguin/proprietary/system_ext/lib/libfm-hci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libfm-hci.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmmosal.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib/libmmparser_lite.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib/libmmparser_lite.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib64/com.qualcomm.qti.ant@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.ant@1.0.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib64/com.qualcomm.qti.dpm.api@1.0.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/com.qualcomm.qti.dpm.api@1.0.so \
-    vendor/xiaomi/gauguin/proprietary/system_ext/lib64/fm_helium.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/fm_helium.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib64/lib-imsvideocodec.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvideocodec.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib64/lib-imsvt.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvt.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib64/lib-imsvtextutils.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/lib-imsvtextutils.so \
@@ -36,7 +35,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib64/libdpmfdmgr.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdpmfdmgr.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib64/libdpmframework.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdpmframework.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib64/libdpmtcm.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libdpmtcm.so \
-    vendor/xiaomi/gauguin/proprietary/system_ext/lib64/libfm-hci.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libfm-hci.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib64/libimscamera_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libimscamera_jni.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib64/libimsmedia_jni.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libimsmedia_jni.so \
     vendor/xiaomi/gauguin/proprietary/system_ext/lib64/libmmosal.so:$(TARGET_COPY_OUT_SYSTEM_EXT)/lib64/libmmosal.so \
@@ -52,7 +50,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/cnss-daemon:$(TARGET_COPY_OUT_VENDOR)/bin/cnss-daemon \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/dpmQmiMgr:$(TARGET_COPY_OUT_VENDOR)/bin/dpmQmiMgr \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/feature_enabler_client:$(TARGET_COPY_OUT_VENDOR)/bin/feature_enabler_client \
-    vendor/xiaomi/gauguin/proprietary/vendor/bin/fm_qsoc_patches:$(TARGET_COPY_OUT_VENDOR)/bin/fm_qsoc_patches \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/garden_app:$(TARGET_COPY_OUT_VENDOR)/bin/garden_app \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/hvdcp_opti:$(TARGET_COPY_OUT_VENDOR)/bin/hvdcp_opti \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.bluetooth@1.0-service-qti \
@@ -66,7 +63,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.qti.esepowermanager@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.esepowermanager@1.1-service \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.alarm@1.0-service \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service \
-    vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.qti.hardware.display.composer-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.display.composer-service \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.qti.hardware.iop@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.iop@2.0-service \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.qti.hardware.perf@2.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.perf@2.2-service \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.qccvndhal@1.0-service \
@@ -76,12 +72,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.qti.hardware.soter@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.soter@1.0-service \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.qti.secure_element@1.2-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.qti.secure_element@1.2-service \
-    vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service \
-    vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.xiaomi.hardware.displayfeature@1.0-service \
-    vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.xiaomi.hardware.misys@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.xiaomi.hardware.misys@1.0-service \
-    vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.xiaomi.hardware.misys@2.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.xiaomi.hardware.misys@2.0-service \
-    vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.xiaomi.hardware.misys@3.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.xiaomi.hardware.misys@3.0-service \
-    vendor/xiaomi/gauguin/proprietary/vendor/bin/hw/vendor.xiaomi.hardware.touchfeature@1.0-service:$(TARGET_COPY_OUT_VENDOR)/bin/hw/vendor.xiaomi.hardware.touchfeature@1.0-service \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/ims_rtp_daemon:$(TARGET_COPY_OUT_VENDOR)/bin/ims_rtp_daemon \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/imsdatadaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsdatadaemon \
     vendor/xiaomi/gauguin/proprietary/vendor/bin/imsqmidaemon:$(TARGET_COPY_OUT_VENDOR)/bin/imsqmidaemon \
@@ -239,7 +229,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/data/netmgr_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/data/netmgr_config.xml \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/default-permissions/com.qualcomm.qti.cne.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default-permissions/com.qualcomm.qti.cne.xml \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/elliptic_sensor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/elliptic_sensor.xml \
-    vendor/xiaomi/gauguin/proprietary/vendor/etc/init.qti.fm.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init.qti.fm.sh \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.drm@1.3-service.widevine.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.gatekeeper@1.0-service-qti.rc \
@@ -258,7 +247,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/init-qcril-data.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init-qcril-data.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/init.batterysecret.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.batterysecret.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/init.mi_thermald.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.mi_thermald.rc \
-    vendor/xiaomi/gauguin/proprietary/vendor/etc/init/init.qti.fm.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.qti.fm.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/init.time_daemon.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.time_daemon.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/init.vendor.sensors.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.vendor.sensors.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/init_thermal-engine.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init_thermal-engine.rc \
@@ -276,7 +264,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.alarm@1.0-service.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc \
-    vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.qti.hardware.display.composer-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.display.composer-service.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.iop@2.0-service.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.qti.hardware.perf@2.2-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.perf@2.2-service.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.hardware.qccvndhal@1.0-service.rc \
@@ -290,16 +277,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.qti.tftp.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.qti.tftp.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.sensors.qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.qti.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.sensors.sscrpcd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.sensors.sscrpcd.rc \
-    vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc \
-    vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.displayfeature@1.0-service.rc \
-    vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.xiaomi.hardware.misys@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.misys@1.0-service.rc \
-    vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.xiaomi.hardware.misys@2.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.misys@2.0-service.rc \
-    vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.xiaomi.hardware.misys@3.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.misys@3.0-service.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc \
-    vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.touchfeature@1.0-service.rc \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/init/vppservice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vppservice.rc \
-    vendor/xiaomi/gauguin/proprietary/vendor/etc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf \
-    vendor/xiaomi/gauguin/proprietary/vendor/libnfc-nxp_RF.conf:$(TARGET_COPY_OUT_VENDOR)/libnfc-nxp_RF.conf \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/msm_irqbalance.conf:$(TARGET_COPY_OUT_VENDOR)/etc/msm_irqbalance.conf \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/perf/commonresourceconfigs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/commonresourceconfigs.xml \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/perf/perfboostsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perfboostsconfig.xml \
@@ -310,6 +289,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/qdcm_calib_data_xiaomi_36_02_0a_video_mode_dsc_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_xiaomi_36_02_0a_video_mode_dsc_dsi_panel.xml \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/qdcm_calib_data_xiaomi_42_02_0b_video_mode_dsc_dsi_panel.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_xiaomi_42_02_0b_video_mode_dsc_dsi_panel.xml \
+    vendor/xiaomi/gauguin/proprietary/vendor/etc/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/seccomp_policy/atfwd@2.0.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/atfwd@2.0.policy \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/seccomp_policy/imsrtp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/imsrtp.policy \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/vendor.qti.hardware.dsp.policy \
@@ -353,7 +333,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/sensors/config/sns_tilt_sw_disabled.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_tilt_sw_disabled.json \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/sensors/config/sns_tilt_sw_enabled.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_tilt_sw_enabled.json \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/sensors/config/sns_tilt_to_wake.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/config/sns_tilt_to_wake.json \
-    vendor/xiaomi/gauguin/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/sensors/judge_calibrated.json:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/judge_calibrated.json \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/sensors/proto/descriptor.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/descriptor.proto \
     vendor/xiaomi/gauguin/proprietary/vendor/etc/sensors/proto/nanopb.proto:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/proto/nanopb.proto \
@@ -643,7 +622,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vendor.qti.hardware.fm@1.0-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/hw/vulkan.adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib/hw/vulkan.adreno.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/libAlacSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libAlacSwDec.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/libApeSwDec.so:$(TARGET_COPY_OUT_VENDOR)/lib/libApeSwDec.so \
@@ -825,7 +803,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_sar@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_sar@1.0.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.bluetooth_sar@1.1.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/vendor.qti.hardware.dsp@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.dsp@1.0.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib/vendor.qti.hardware.fm@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.fm@1.0.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/vendor.qti.hardware.vpp@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@1.1.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/vendor.qti.hardware.vpp@1.2.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@1.2.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib/vendor.qti.hardware.vpp@1.3.so:$(TARGET_COPY_OUT_VENDOR)/lib/vendor.qti.hardware.vpp@1.3.so \
@@ -959,9 +936,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/camera.qcom.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/camera.qcom.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/com.qti.chi.override.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/com.qti.chi.override.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/consumerir.lito.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/consumerir.lito.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/displayfeature.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/displayfeature.default.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/fingerprint.fpc.lito.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.fpc.lito.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/fingerprint.goodix.lito.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.goodix.lito.so \
+    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/fingerprint.fpc.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.fpc.default.so \
+    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/fingerprint.goodix.default.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/fingerprint.goodix.default.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/sound_trigger.primary.lito.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/sound_trigger.primary.lito.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.gnss@4.0-impl.so \
@@ -970,18 +946,11 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.qccvndhal@1.0-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.sensorscalibrate@1.0-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.xiaomi.hardware.citsensorservice@1.1-impl.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.xiaomi.hardware.displayfeature@1.0-impl.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.misys@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.xiaomi.hardware.misys@1.0-impl.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.misys@2.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.xiaomi.hardware.misys@2.0-impl.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.misys@3.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.xiaomi.hardware.misys@3.0-impl.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vendor.xiaomi.hardware.touchfeature@1.0-impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vendor.xiaomi.hardware.touchfeature@1.0-impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/hw/vulkan.adreno.so:$(TARGET_COPY_OUT_VENDOR)/lib64/hw/vulkan.adreno.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/jcos_nq_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/jcos_nq_client.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/lib-imscmservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/lib-imscmservice.so \
@@ -1044,6 +1013,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libalCFR.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalCFR.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libalLDC.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalLDC.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libalhLDC.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libalhLDC.so \
+    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libanc_dc_base.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libanc_dc_base.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libaoa.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaoa.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libarcsoft_beautyshot.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_beautyshot.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libarcsoft_bodyslim.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libarcsoft_bodyslim.so \
@@ -1061,6 +1031,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libaudioroute_ext.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libaudioroute_ext.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libbase64.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbase64.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libbatching.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbatching.so \
+    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libbeauty_face_interface.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbeauty_face_interface.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libbitmlengine.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbitmlengine.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libbt-hidlclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbt-hidlclient.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libbtnv.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbtnv.so \
@@ -1088,7 +1059,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libcdfw_remote_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcdfw_remote_api.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libcdsp_default_listener.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcdsp_default_listener.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libcdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcdsprpc.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libcheckpid.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcheckpid.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libchilog.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libchilog.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libcne.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcne.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libcneapiclient.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libcneapiclient.so \
@@ -1102,16 +1072,13 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdataitems.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdataitems.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdiag.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdiag.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdisp-aba.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisp-aba.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdisplaydebug.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplaydebug.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdisplayqos.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplayqos.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdisplayskuutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdisplayskuutils.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdng_sdk2vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdng_sdk2vendor.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdpmqmihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpmqmihal.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdpps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdpps.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrm.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdrmfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmfs.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdrmtime.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmtime.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdrmutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdrmutils.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdsi_netctrl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdsi_netctrl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libdsutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libdsutils.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libfastcvdsp_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libfastcvdsp_stub.so \
@@ -1131,7 +1098,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libgnsspps.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgnsspps.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libgoodixhwfingerprint.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgoodixhwfingerprint.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libgps.utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgps.utils.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libgpu_tonemapper.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpu_tonemapper.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libgpudataproducer.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgpudataproducer.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libgsl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libgsl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libhdr_tm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libhdr_tm.so \
@@ -1160,7 +1126,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/liblocation_api.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocation_api.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/liblocationservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/liblocationservice_glue.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblocationservice_glue.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/liblogwrap_vendor.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblogwrap_vendor.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/liblowi_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_client.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/liblowi_wifihal.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblowi_wifihal.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/liblqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/liblqe.so \
@@ -1170,6 +1135,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libmeters.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmeters.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libmiStereoFactoryRemapBasicLib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiStereoFactoryRemapBasicLib.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libmiStereoFactoryRemapLib.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiStereoFactoryRemapLib.so \
+    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libmiai_portraitsupernight.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmiai_portraitsupernight.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libmialgo_rfs.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmialgo_rfs.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libmialgo_sd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmialgo_sd.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libmialgo_utils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libmialgo_utils.so \
@@ -1215,7 +1181,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqdi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdi.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqdma_file_agent.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdma_file_agent.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqdp.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdp.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqdutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqdutils.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqisl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqisl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqmi.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqmi_cci.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmi_cci.so \
@@ -1228,7 +1193,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqmiservices.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqmiservices.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqrtr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqrtr.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqseed3.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqseed3.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqservice.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqservice.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqsocket.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqsocket.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqti-iopd-client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-iopd-client.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libqti-iopd.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libqti-iopd.so \
@@ -1252,14 +1216,12 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libscveObjectSegmentation_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscveObjectSegmentation_stub.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libscveObjectTracker.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscveObjectTracker.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libscveObjectTracker_stub.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libscveObjectTracker_stub.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsdedrm.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdedrm.so \
+    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsdk_sr.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdk_sr.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsdm-color.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-color.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsdm-colormgr-algo.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-colormgr-algo.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsdm-diag.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-diag.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsdm-disp-vndapis.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdm-disp-vndapis.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsdmcore.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmcore.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsdmextension.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmextension.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsdmutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdmutils.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsdsprpc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsdsprpc.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsecureui.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libsecureui_svcsock.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libsecureui_svcsock.so \
@@ -1305,6 +1267,8 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libvpphvx.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpphvx.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libvpplibrary.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpplibrary.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libvpptestutils.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libvpptestutils.so \
+    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libwa_dof.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwa_dof.so \
+    vendor/xiaomi/gauguin/proprietary/vendor/lib64/libwa_refocus.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwa_refocus.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libwa_rtdof.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwa_rtdof.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libwms.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwms.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/libwqe.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libwqe.so \
@@ -1321,7 +1285,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/se_nq_extn_client.so:$(TARGET_COPY_OUT_VENDOR)/lib64/se_nq_extn_client.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/sensors.elliptic.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.elliptic.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/sensors.ssc.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.ssc.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/sensors.touch.so:$(TARGET_COPY_OUT_VENDOR)/lib64/sensors.touch.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/soundfx/libasphere.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libasphere.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/soundfx/libqcbassboost.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcbassboost.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/soundfx/libqcreverb.so:$(TARGET_COPY_OUT_VENDOR)/lib64/soundfx/libqcreverb.so \
@@ -1417,18 +1380,10 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.qti.imsrtpservice@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.imsrtpservice@3.0.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.qti.latency@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.qti.latency@2.0.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.citsensorservice@1.0.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.citsensorservice@1.1.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.displayfeature@1.0.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.fingerprintextension@1.0.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.misys@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.misys@1.0.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.misys@2.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.misys@2.0.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.misys@3.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.misys@3.0.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.mlipay@1.0.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.mlipay@1.1.so \
     vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so \
-    vendor/xiaomi/gauguin/proprietary/vendor/lib64/vendor.xiaomi.hardware.touchfeature@1.0.so:$(TARGET_COPY_OUT_VENDOR)/lib64/vendor.xiaomi.hardware.touchfeature@1.0.so \
     vendor/xiaomi/gauguin/proprietary/vendor/radio/qcril_database/qcril.db:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/qcril.db \
     vendor/xiaomi/gauguin/proprietary/vendor/radio/qcril_database/upgrade/0_initial.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/0_initial.sql \
     vendor/xiaomi/gauguin/proprietary/vendor/radio/qcril_database/upgrade/1_version_intro.sql:$(TARGET_COPY_OUT_VENDOR)/radio/qcril_database/upgrade/1_version_intro.sql \
@@ -1442,7 +1397,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libfastcvopt \
     libthermalclient \
-    vendor.qti.hardware.fm@1.0 \
     CneApp \
     IWlanService \
     SoterService \
@@ -1468,8 +1422,4 @@ PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.3-service-qti \
     manifest_android.hardware.drm@1.3-service.widevine \
     manifest_vendor.xiaomi.hardware.mlipay \
-    vendor.qti.gnss@4.0-service \
-    vendor.qti.hardware.display.composer-service \
-    vendor.xiaomi.hardware.misys@1.0 \
-    vendor.xiaomi.hardware.misys@2.0 \
-    vendor.xiaomi.hardware.misys@3.0
+    vendor.qti.gnss@4.0-service
